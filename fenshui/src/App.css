@@ -272,15 +272,30 @@ h1 {
   gap: 30px;
 }
 .image-services {
+  width: 100%;
   display: flex;
   gap: 20px;
+  justify-content: space-between;
 }
 .image-services img {
   width: 33%;
+  height: 300px;
 }
 
 .content-services {
   display: flex;
   gap: 20px;
   flex-direction: column;
+}
+.content-services p {
+  width: 50%;
+  font-size: 20px;
+}
+.content-services h2 {
+  font-size: 40px;
+}
+.botones-services {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

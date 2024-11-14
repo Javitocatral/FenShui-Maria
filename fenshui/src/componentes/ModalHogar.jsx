@@ -1,4 +1,5 @@
 import Modal from 'react-bootstrap/Modal'
+import volver from '../assets/volver.png'
 
 function ModalHogar({ setShow, show, popup }) {
   return (
@@ -14,17 +15,23 @@ function ModalHogar({ setShow, show, popup }) {
             <div className="content-services">
               <h2>{popup.titulo}</h2>
               <p>{popup.descripcion}</p>
-              <div>
-                <button
-                  className="btn-nav"
-                  style={{
-                    width: '33%',
-                  }}
-                >
-                  Ponte en contacto conmigo y lo valoramos
-                </button>
-                <button onClick={() => setShow(false)}>X</button>
-              </div>
+            </div>
+            <div className="botones-services">
+              <button
+                className="btn-nav"
+                style={{
+                  width: '33%',
+                }}
+              >
+                Ponte en contacto conmigo y lo valoramos
+              </button>
+              <button onClick={() => setShow(false)}>
+                <img
+                  style={{ width: '25px' }}
+                  src={volver}
+                  alt="volver hacia atras"
+                />
+              </button>
             </div>
           </div>
         </Modal.Body>
