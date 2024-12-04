@@ -8,7 +8,6 @@ import cafeteria from '../assets/cafeteria.jpg'
 import flores from '../assets/flores.jpg'
 import oficina from '../assets/oficina.jpg'
 import escritorio from '../assets/escritorio.jpg'
-import comedor2 from '../assets/comedor2.jpg'
 import rincon from '../assets/rincon.jpg'
 
 const servicios = [
@@ -50,7 +49,7 @@ const servicios = [
       descripcion:
         'Una vez terminado el estudio a veces es complicado, o no tienes tiempo para localizar esas piezas que hemos detectado que armonizarían o ayudarían a distribuir mejor ese espacio. Quizá prefieres dejarlo en mis manos para ir a lo seguro y conjugar estilo y practicidad sin más preocupaciones.',
       img1: escritorio,
-      img2: comedor2,
+      img2: rincon,
       img3: dormitorio,
     },
   },

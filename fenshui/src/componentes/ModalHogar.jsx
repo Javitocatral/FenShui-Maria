@@ -1,5 +1,6 @@
 import Modal from 'react-bootstrap/Modal'
 import volver from '../assets/volver.png'
+import { Link } from 'react-router-dom'
 
 function ModalHogar({ setShow, show, popup }) {
   return (
@@ -17,14 +18,16 @@ function ModalHogar({ setShow, show, popup }) {
               <p>{popup.descripcion}</p>
             </div>
             <div className="botones-services">
-              <button
-                className="btn-nav"
-                style={{
-                  width: '33%',
-                }}
-              >
-                Ponte en contacto conmigo y lo valoramos
-              </button>
+              <Link to={'/contacto'}>
+                <button
+                  className="btn-nav"
+                  style={{
+                    width: '33%',
+                  }}
+                >
+                  Ponte en contacto conmigo y lo valoramos
+                </button>
+              </Link>
               <button onClick={() => setShow(false)}>
                 <img
                   style={{ width: '25px' }}
