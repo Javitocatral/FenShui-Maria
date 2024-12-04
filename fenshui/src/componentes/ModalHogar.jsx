@@ -22,7 +22,7 @@ function ModalHogar({ setShow, show, popup }) {
                 <button
                   className="btn-nav"
                   style={{
-                    width: '33%',
+                    width: '100%',
                   }}
                 >
                   Ponte en contacto conmigo y lo valoramos
