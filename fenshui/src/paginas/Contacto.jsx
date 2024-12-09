@@ -13,7 +13,7 @@ function Contacto() {
     descripcion: '',
   })
 
-  const phoneNumber = '3467651129'
+  const phoneNumber = '34676511291'
   const message = '¡Hola! Quiero más información.'
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message

@@ -1,11 +1,17 @@
-import logo from '../assets/logo.png'
+import logo2 from '../assets/logo2.png'
 import Ig from '../assets/ig.png'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className="nav">
-      <img src={logo} alt="" />
+      <img
+        style={{
+          width: '300px',
+        }}
+        src={logo2}
+        alt=""
+      />
 
       <div className="container-btn-nav">
         <a href="#soy">

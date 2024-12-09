@@ -412,3 +412,9 @@ form textarea {
   justify-content: space-between;
   align-items: center;
 }
+.footer-contacto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
