@@ -75,6 +75,12 @@ function Home() {
               que decirte y que te apoye o no en tu vida es algo a lo que puedes
               optar.
             </p>
+            <p>
+              {' '}
+              Uso varias metodologías según tus necesidades: la Escuela clásica
+              de las estrellas voladoras Xuan Kong Fei Xing, la Escuela de la
+              Forma y la Escuela Bagua.{' '}
+            </p>
           </div>
           <div className="image-pink">
             <img className="small-image" src={casa1} alt="casa1" />

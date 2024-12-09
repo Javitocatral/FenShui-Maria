@@ -102,19 +102,19 @@ th {
   flex-direction: column;
 }
 h1 {
-  margin-left: 175px;
+  margin-left: 71px;
   margin-right: 870px;
   font-size: 50px;
   font-weight: bold;
 }
 .home p {
-  margin-left: 175px;
-  margin-right: 630px;
+  margin-left: 71px;
+  margin-right: 50%;
   font-size: 23px;
   font-weight: bold;
 }
 .content-home {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .nav {
   width: 100%;
@@ -250,16 +250,19 @@ h1 {
   border: none;
 }
 .small-image {
-  width: 150px;
+  width: 200px;
 }
 .normal-image {
-  width: 300px;
+  width: 400px;
 }
 .pink-section {
   height: 50%;
   width: 40%;
   font-size: 25px;
   font-weight: bold;
+}
+.pink-section p {
+  padding: 20px;
 }
 .services-container {
   height: 100vh;
@@ -339,7 +342,7 @@ h1 {
 .container-contacto {
   width: 100vw;
   height: 100vh;
-  padding: 50px;
+  padding: 0 50px;
   display: flex;
   flex-direction: column;
 }
@@ -405,7 +408,7 @@ form textarea {
   cursor: none;
 }
 .container-contacto h1 {
-  margin: 20px 0 50px 00px;
+  margin: 20px 0;
 }
 .star-contacto {
   display: flex;
