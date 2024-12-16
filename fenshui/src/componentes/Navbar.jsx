@@ -26,15 +26,6 @@ function Navbar() {
       </div>
 
       <div className="container-leng">
-        <a href="">
-          <img
-            style={{
-              width: '25px',
-            }}
-            src={Ig}
-            alt=""
-          />
-        </a>
         <button>EN</button>
         <button>ES</button>
       </div>

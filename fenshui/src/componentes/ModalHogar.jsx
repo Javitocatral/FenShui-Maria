@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function ModalHogar({ setShow, show, popup }) {
   return (
     <>
-      <Modal show={show}>
+      <Modal show={show} fullscreen={true}>
         <Modal.Body>
           <div className="services-container" style={{ height: '100vh' }}>
             <div className="image-services">

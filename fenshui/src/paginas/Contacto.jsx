@@ -3,9 +3,14 @@ import salon from '../assets/salon.jpg'
 import mensaje from '../assets/whatsapp.png'
 import volver from '../assets/volver.png'
 import emailjs from 'emailjs-com'
+import { Link } from 'react-router-dom'
+import ModalLegal from '../componentes/ModalLegal'
+import legal from '../data/dataLegal'
 
 function Contacto() {
   const [acepto, setAcepto] = useState(false)
+  const [lgShow, setLgShow] = useState(false)
+
   const [data, setDatos] = useState({
     nombre: '',
     email: '',
@@ -70,7 +75,9 @@ function Contacto() {
       <div className="container-contacto">
         <div className="star-contacto">
           <h1>Contacta conmigo.</h1>
-          <img style={{ width: '25px' }} src={volver} alt="Volver" />
+          <Link to={'/'}>
+            <img style={{ width: '25px' }} src={volver} alt="Volver" />
+          </Link>
         </div>
         <div className="content-form">
           <div style={{ width: '50%' }}>
@@ -137,9 +144,34 @@ function Contacto() {
                 Acepto la política de privacidad
               </p>
             </div>
+            <div className="footer-contacto">
+              <div>
+                <button
+                  style={{
+                    color: '#fd9c9b',
+                    textAlign: 'left',
+                    marginBottom: '1rem',
+                  }}
+                  onClick={() => {
+                    setLgShow(true)
+                  }}
+                >
+                  Política de privacidad
+                </button>
+              </div>
+            </div>
+
+            <ModalLegal
+              key={'Política de privacida'}
+              info={legal[2]}
+              lgShow={lgShow}
+              setLgShow={setLgShow}
+            />
+
             <button
               disabled={!acepto}
               onClick={handleSubmit}
+              style={{ marginBottom: '1rem' }}
               className={!acepto ? 'disabled' : 'btn-nav'}
             >
               Enviar

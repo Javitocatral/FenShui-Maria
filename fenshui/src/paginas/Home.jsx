@@ -6,12 +6,12 @@ import dataServicios from '../data/dataServicios.js'
 import casa1 from '../assets/casa-cool.jpg'
 import casa2 from '../assets/casa-cool2.jpg'
 import Fadesection from '../componentes/Fadesection.jsx'
-import Footer from '../componentes/footer.jsx'
+import Footer from '../componentes/Footer.jsx'
 import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div className="container">
+    <div>
       <div className="home">
         <Navbar />
         <div className="content-home">
