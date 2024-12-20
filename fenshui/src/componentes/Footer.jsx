@@ -22,12 +22,12 @@ function Footer() {
           width: '158px',
         }}
         src={logofooter}
-        alt="logotipo que pone maria la torre"
+        alt="logotipo que pone maria latorre"
       />
       <div className="footer-contacto">
-        <h5>Maria La Torre</h5>
+        <h5>Maria Latorre</h5>
         <a
-          style={{ color: 'white' }}
+          style={{ color: 'black' }}
           href="mailto:marialatorrefengshui@gmail.com"
         >
           marialatorrefengshui@gmail.com
@@ -60,7 +60,7 @@ function Footer() {
         {legal.map((cadalegal, index) => (
           <div key={index}>
             <button
-              style={{ color: 'white', textAlign: 'left' }}
+              style={{ color: 'black', textAlign: 'left' }}
               onClick={() => {
                 setLgShow(true)
                 setCurrentLegalInfo(cadalegal)

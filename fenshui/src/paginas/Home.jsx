@@ -71,9 +71,10 @@ function Home() {
         >
           <div className="pink-section">
             <p>
-              Consigue la mejor versión de tu espacio. Tu espacio tiene mucho
-              que decirte y que te apoye o no en tu vida es algo a lo que puedes
-              optar.
+              Consigue la mejor versión de tu espacio.
+              <br />
+              Tu espacio tiene mucho que decirte y que te apoye o no en tu vida
+              es algo a lo que puedes optar.
             </p>
             <p>
               {' '}

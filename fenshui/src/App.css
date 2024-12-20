@@ -250,12 +250,13 @@ h1 {
   border: none;
 }
 .small-image {
-  width: 150px;
+  width: 250px;
 }
 .normal-image {
   width: 350px;
 }
 .pink-section {
+  margin-top: 110px;
   height: 50%;
   width: 40%;
   font-size: 25px;
@@ -331,8 +332,8 @@ h1 {
 }
 .container-footer {
   padding: 20px 50px;
-  background-color: #fd9c9b;
-  color: white;
+  background-color: white;
+  color: black;
   display: flex;
   justify-content: space-between;
 }
