@@ -115,7 +115,7 @@ h1 {
   font-weight: bold;
 }
 .content-home {
-  margin-top: 35px;
+  margin-top: 85px;
 }
 .nav {
   width: 100%;
@@ -423,9 +423,13 @@ form textarea {
   gap: 8px;
 }
 .socialmedia {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   gap: 5px;
+}
+.footer-contacto h5 {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   /* General adjustments */
