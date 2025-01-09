@@ -3,7 +3,7 @@ import logofooter from '../assets/logo-footer.png'
 import whatsap from '../assets/whatsapp-footer.png'
 import ModalLegal from './ModalLegal'
 import legal from '../data/dataLegal'
-import ig from '../assets/ig-blanco.png'
+import ig from '../assets/ig.png'
 import youtube from '../assets/youtube.png'
 
 function Footer() {
