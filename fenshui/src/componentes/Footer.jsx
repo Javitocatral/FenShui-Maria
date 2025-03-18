@@ -37,14 +37,14 @@ function Footer() {
             <img
               style={{ width: '30px' }}
               src={whatsap}
-              alt="Icono de la red social Whatsapp"
+              alt="logotipo de la red social Whatsapp"
             />
           </a>
           <a href="#">
             <img
               style={{ width: '30px' }}
               src={ig}
-              alt="logotipo de instagrma una camara de fotos"
+              alt="logotipo de instagram una camara de fotos"
             />
           </a>
           <a href="#">
