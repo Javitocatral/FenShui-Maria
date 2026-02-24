@@ -98,7 +98,7 @@ th {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -139,7 +139,9 @@ h1 {
   color: white;
   font-size: 18px;
   font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .btn-nav:hover {
@@ -155,7 +157,7 @@ h1 {
   align-items: flex-start;
 }
 .about {
-  height: 100vh;
+  min-height: auto;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -180,7 +182,7 @@ h1 {
   font-size: 25px;
 }
 .estudios {
-  height: 100vh;
+  height: auto;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -304,7 +306,9 @@ h1 {
   display: flex;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .fade-in-scroll {
@@ -446,11 +450,15 @@ form textarea {
   .home h1 {
     font-size: 30px;
     margin: 0 auto 20px;
+    font-weight: bolder;
+    color: black;
   }
 
   .home p {
-    font-size: 18px;
+    font-size: 19px;
     margin: 0 auto;
+    font-weight: bolder;
+    color: black;
   }
 
   .nav {
@@ -467,6 +475,10 @@ form textarea {
   .btn-nav {
     width: 100%;
     font-size: 16px;
+  }
+  .container-leng {
+    height: auto;
+    gap: 5px;
   }
 
   .about {
@@ -486,8 +498,11 @@ form textarea {
 
   .estudios {
     flex-direction: column;
-    padding: 20px;
+    padding: 0px;
     gap: 20px;
+  }
+  .estudios h2 {
+    text-align: center;
   }
 
   .container-card {
@@ -499,10 +514,21 @@ form textarea {
     flex-direction: column;
     gap: 15px;
   }
+  .image-pink {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pink-section {
+    margin-top: 10px;
+    height: 50%;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+  }
 
   .image-pink img {
     width: 100%;
-    height: auto;
+    height: 50%;
   }
 
   .services-container {
@@ -549,6 +575,7 @@ form textarea {
   .container-footer {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .footer-contacto {

@@ -49,9 +49,10 @@ function Home() {
         <div id="servicios" className="estudios">
           <h2>Lo que puedo hacer por ti</h2>
           <div className="cards">
-            {dataServicios.map((cadaServicio) => {
+            {dataServicios.map((cadaServicio, index) => {
               return (
                 <Card
+                  key={index}
                   estudio={cadaServicio.titulo}
                   text={cadaServicio.descripcion}
                   img={cadaServicio.img}
