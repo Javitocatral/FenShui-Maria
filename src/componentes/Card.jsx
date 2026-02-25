@@ -15,7 +15,6 @@ function Card({ estudio, text, img, popup }) {
         <h3> {estudio} </h3>
         <p>{text}</p>
         <button className="btn-nav" onClick={handleOpen}>
-          {' '}
           Quiero saber más
         </button>
       </div>
