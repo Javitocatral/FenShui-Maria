@@ -98,7 +98,7 @@ th {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -157,7 +157,7 @@ h1 {
   align-items: flex-start;
 }
 .about {
-  min-height: auto;
+  min-height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -182,7 +182,7 @@ h1 {
   font-size: 25px;
 }
 .estudios {
-  height: auto;
+  height: 100vh;
   background-color: white;
   display: flex;
   justify-content: center;
