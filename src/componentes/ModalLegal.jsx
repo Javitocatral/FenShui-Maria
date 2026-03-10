@@ -1,6 +1,5 @@
 import Modal from 'react-bootstrap/Modal'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../style/modalLegal.css'
 
 function ModalLegal({ lgShow, setLgShow, info }) {
   const titulo = info?.titulo || 'Título no disponible'

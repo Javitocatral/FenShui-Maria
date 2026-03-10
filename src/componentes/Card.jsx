@@ -1,21 +1,21 @@
 import { useState } from 'react'
 import ModalHogar from './ModalHogar'
+import { useTranslation } from 'react-i18next'
 
 function Card({ estudio, text, img, popup }) {
+  const { t } = useTranslation()
   const [show, setShow] = useState(false)
-  const handleOpen = () => {
-    setShow(true)
-  }
+
   return (
     <div className="container-card" style={{ marginBottom: '20px' }}>
       <div className="image">
-        <img src={img} alt="" />
+        <img src={img} alt="" loading="lazy" />
       </div>
       <div className="contete-card">
-        <h3> {estudio} </h3>
+        <h3>{estudio}</h3>
         <p>{text}</p>
-        <button className="btn-nav" onClick={handleOpen}>
-          Quiero saber más
+        <button className="btn-nav" onClick={() => setShow(true)}>
+          {t('card.saber_mas')}
         </button>
       </div>
       <ModalHogar popup={popup} show={show} setShow={setShow} />

@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import salon from '../assets/salon.jpg'
-import mensaje from '../assets/whatsapp.png'
-import volver from '../assets/volver.png'
+import salon from '../assets/salon.webp'
+import mensaje from '../assets/whatsapp.webp'
+import volver from '../assets/volver.webp'
 import emailjs from 'emailjs-com'
 import { Link } from 'react-router-dom'
 import ModalLegal from '../componentes/ModalLegal'
 import legal from '../data/dataLegal'
+import { useTranslation } from 'react-i18next'
 
 function Contacto() {
+  const { t } = useTranslation()
   const [acepto, setAcepto] = useState(false)
   const [lgShow, setLgShow] = useState(false)
+  const [mensaje_estado, setMensajeEstado] = useState(null)
+  const [enviando, setEnviando] = useState(false)
 
   const [data, setDatos] = useState({
     nombre: '',
@@ -19,69 +23,84 @@ function Contacto() {
   })
 
   const phoneNumber = '34676511291'
-  const message = '¡Hola! Quiero más información.'
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message
-  )}`
+  const whatsappMessage = t('footer.whatsapp_mensaje')
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setDatos((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
+    setDatos((prevData) => ({ ...prevData, [name]: value }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    if (!data.nombre.trim()) {
+      setMensajeEstado({ tipo: 'error', texto: t('contacto.error_nombre') })
+      return
+    }
+    if (!data.email.trim()) {
+      setMensajeEstado({ tipo: 'error', texto: t('contacto.error_email') })
+      return
+    }
+    if (!data.descripcion.trim()) {
+      setMensajeEstado({
+        tipo: 'error',
+        texto: t('contacto.error_descripcion'),
+      })
+      return
+    }
     if (!acepto) {
-      alert('Debes aceptar la política de privacidad.')
+      setMensajeEstado({ tipo: 'error', texto: t('contacto.alert_privacidad') })
       return
     }
 
+    setEnviando(true)
+    setMensajeEstado(null)
+
     emailjs
       .send(
-        'service_bd2zbzw',
-        'template_dkas73v',
+        'service_9zkxffn',
+        'template_h7zvn1d',
         {
           nombre: data.nombre,
           email: data.email,
           telefono: data.telefono,
           descripcion: data.descripcion,
         },
-        'Z5aLT4y_vZsxVVo9m'
+        'IwPsel-v-iQPV5RkM'
       )
       .then(
-        (result) => {
-          console.log('Correo enviado:', result.text)
-          alert('¡Mensaje enviado correctamente!')
-          setDatos({
-            nombre: '',
-            email: '',
-            telefono: '',
-            descripcion: '',
-          })
+        () => {
+          setMensajeEstado({ tipo: 'ok', texto: t('contacto.alert_ok') })
+          setDatos({ nombre: '', email: '', telefono: '', descripcion: '' })
+          setAcepto(false)
+          setEnviando(false)
         },
-        (error) => {
-          console.error('Error al enviar el correo:', error.text)
-          alert('Hubo un problema al enviar el mensaje. Inténtalo de nuevo.')
+        () => {
+          setMensajeEstado({ tipo: 'error', texto: t('contacto.alert_error') })
+          setEnviando(false)
         }
       )
   }
+
+  const legalData = legal(t)
 
   return (
     <>
       <div className="container-contacto">
         <div className="star-contacto">
-          <h1>Contacta conmigo.</h1>
+          <h1>{t('contacto.titulo')}</h1>
           <Link to={'/'}>
             <img style={{ width: '25px' }} src={volver} alt="Volver" />
           </Link>
         </div>
         <div className="content-form">
           <div style={{ width: '50%' }}>
-            <img src={salon} alt="Imagen de un salón moderno y bonito" />
+            <img
+              src={salon}
+              alt="Imagen de un salón moderno y bonito"
+              loading="lazy"
+            />
           </div>
           <div className="formulario">
             <form>
@@ -90,27 +109,27 @@ function Contacto() {
                 name="nombre"
                 value={data.nombre}
                 onChange={handleChange}
-                placeholder="NOMBRE"
+                placeholder={t('contacto.nombre')}
               />
               <input
                 type="email"
                 name="email"
                 value={data.email}
                 onChange={handleChange}
-                placeholder="EMAIL"
+                placeholder={t('contacto.email')}
               />
               <input
                 type="tel"
                 name="telefono"
                 value={data.telefono}
                 onChange={handleChange}
-                placeholder="TELEFONO"
+                placeholder={t('contacto.telefono')}
               />
               <textarea
                 name="descripcion"
                 value={data.descripcion}
                 onChange={handleChange}
-                placeholder="CUAL ES TU DUDA?"
+                placeholder={t('contacto.duda')}
               ></textarea>
             </form>
           </div>
@@ -134,48 +153,71 @@ function Contacto() {
           </div>
 
           <div className="enviar">
-            <div className="checkbox">
-              <input
-                type="checkbox"
-                checked={acepto}
-                onChange={() => setAcepto(!acepto)}
-              />
-              <p style={{ paddingBottom: '3px' }}>
-                Acepto la política de privacidad
-              </p>
-            </div>
-            <div className="footer-contacto">
-              <div>
-                <button
-                  style={{
-                    color: '#fd9c9b',
-                    textAlign: 'left',
-                    marginBottom: '1rem',
-                  }}
-                  onClick={() => {
-                    setLgShow(true)
-                  }}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: '100%',
+              }}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '20px',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <div
+                  style={{ display: 'flex', alignItems: 'center', gap: '5px' }}
                 >
-                  Política de privacidad
+                  <input
+                    type="checkbox"
+                    checked={acepto}
+                    onChange={() => setAcepto(!acepto)}
+                  />
+                  <p style={{ margin: '0', marginBottom: '2px' }}>
+                    {t('contacto.acepto')}
+                  </p>
+                </div>
+
+                <button
+                  style={{ color: '#fd9c9b' }}
+                  onClick={() => setLgShow(true)}
+                >
+                  {t('contacto.politica')}
+                </button>
+
+                <ModalLegal
+                  key={'politica-privacidad'}
+                  info={legalData[2]}
+                  lgShow={lgShow}
+                  setLgShow={setLgShow}
+                />
+
+                <button
+                  disabled={!acepto || enviando}
+                  onClick={handleSubmit}
+                  className={!acepto ? 'disabled' : 'btn-nav'}
+                >
+                  {enviando ? '...' : t('contacto.enviar')}
                 </button>
               </div>
+
+              {mensaje_estado && (
+                <p
+                  style={{
+                    color: mensaje_estado.tipo === 'ok' ? '#4caf50' : '#e53935',
+                    fontSize: '0.9rem',
+                    marginTop: '0.8rem',
+                    fontWeight: '500',
+                  }}
+                >
+                  {mensaje_estado.tipo === 'ok' ? '✅ ' : '❌ '}
+                  {mensaje_estado.texto}
+                </p>
+              )}
             </div>
-
-            <ModalLegal
-              key={'Política de privacida'}
-              info={legal[2]}
-              lgShow={lgShow}
-              setLgShow={setLgShow}
-            />
-
-            <button
-              disabled={!acepto}
-              onClick={handleSubmit}
-              style={{ marginBottom: '1rem' }}
-              className={!acepto ? 'disabled' : 'btn-nav'}
-            >
-              Enviar
-            </button>
           </div>
         </div>
       </div>
