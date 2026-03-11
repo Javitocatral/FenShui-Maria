@@ -36,20 +36,20 @@ function ModalHogar({ setShow, show, popup, tipo }) {
             <h2>{popup.titulo}</h2>
             <p>{popup.descripcion}</p>
           </div>
+          {/* Cuadro de precios */}
           <div className="precio-box">
             <h3
               style={{
                 fontSize: '16px',
                 fontWeight: '900',
-                marginBottom: '5px',
+                marginBottom: '8px',
                 color: '#fd9c9b',
               }}
             >
               {t('servicios.precios_titulo')}
             </h3>
             <p className="precio-proceso">{t('servicios.precios_proceso')}</p>
-            <strong>{t('servicios.precios_hogar_titulo')}: </strong>
-            <span>{precioTexto}</span>
+            <p className="precio-proceso">{precioTexto}</p>
           </div>
 
           <div className="botones-services">

@@ -93,6 +93,8 @@ fieldset {
 th {
   font: inherit;
 }
+
+/* ===== HOME ===== */
 .home {
   background-image: url('./assets/home.webp');
   background-size: cover;
@@ -102,36 +104,44 @@ th {
   display: flex;
   flex-direction: column;
 }
-.content-home h2 {
+
+.content-home {
+  margin-top: 85px;
   margin-left: 71px;
-  margin-right: 870px;
+  max-width: 750px;
+  padding: 30px 40px;
+}
+
+.content-home h2 {
   font-size: 50px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
+
 .home p {
-  margin-left: 71px;
-  margin-right: 50%;
   font-size: 23px;
   font-weight: bold;
 }
-.content-home {
-  margin-top: 85px;
-}
+
+/* ===== NAV ===== */
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
+
 .container-btn-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
+
 .nav img {
   padding-left: 20px;
 }
+
 .btn-nav {
   background-color: #fd9c9b;
   width: 225px;
@@ -148,6 +158,7 @@ th {
   background-color: #ff9191;
   transform: scale(1.05);
 }
+
 .container-leng {
   height: 100px;
   font-size: 25px;
@@ -155,6 +166,7 @@ th {
   justify-content: center;
   align-items: flex-start;
 }
+
 .container-leng button {
   position: relative;
   font-size: 25px;
@@ -171,6 +183,8 @@ th {
   color: white;
   border-radius: 50%;
 }
+
+/* ===== ABOUT ===== */
 .about {
   min-height: 100vh;
   background-color: white;
@@ -179,6 +193,14 @@ th {
   align-items: center;
   padding: 40px 100px;
   gap: 60px;
+}
+
+.about img {
+  width: 50%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  border: 5px solid black;
 }
 
 .content-about {
@@ -190,14 +212,6 @@ th {
   margin-top: 50px;
 }
 
-.about img {
-  border: 5px solid black;
-  width: 50%;
-  max-width: 700px;
-  height: auto;
-  object-fit: cover;
-}
-
 .content-about h2 {
   font-size: clamp(30px, 3vw, 50px);
 }
@@ -206,6 +220,8 @@ th {
   font-size: clamp(16px, 1.2vw, 22px);
   line-height: 1.6;
 }
+
+/* ===== ESTUDIOS ===== */
 .estudios {
   height: 100vh;
   background-color: white;
@@ -220,12 +236,14 @@ th {
   background-size: cover;
   position: relative;
 }
+
 .estudios h2 {
   margin-top: 40px;
   font-size: 40px;
   font-weight: 900;
   z-index: 11;
 }
+
 .estudios::before {
   content: '';
   position: absolute;
@@ -237,6 +255,7 @@ th {
   backdrop-filter: blur(10px);
   pointer-events: none;
 }
+
 .container-card {
   background-color: white;
   display: flex;
@@ -247,6 +266,7 @@ th {
   text-align: center;
   z-index: 10;
 }
+
 .contete-card {
   position: relative;
   display: flex;
@@ -255,33 +275,42 @@ th {
   flex-direction: column;
   padding: 20px 20px 50px;
 }
+
 .contete-card h3 {
   font-weight: 900;
 }
+
 .cards {
   gap: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contete-card .btn-nav {
   position: absolute;
   bottom: -10px;
 }
+
+/* ===== PINK SECTION ===== */
 .image-pink {
   display: flex;
   align-items: flex-end;
   gap: 20px;
 }
+
 .image-pink img {
   border: none;
 }
+
 .small-image {
   width: 250px;
 }
+
 .normal-image {
   width: 350px;
 }
+
 .pink-section {
   margin-top: 110px;
   height: 50%;
@@ -290,6 +319,7 @@ th {
   font-weight: bold;
 }
 
+/* ===== MODAL SERVICIOS ===== */
 .services-container {
   height: 100vh;
   background-color: white;
@@ -300,12 +330,14 @@ th {
   padding: 0 100px;
   gap: 30px;
 }
+
 .image-services {
   width: 100%;
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
+
 .image-services img {
   width: 33%;
   height: 300px;
@@ -315,18 +347,23 @@ th {
   display: flex;
   flex-direction: column;
 }
+
 .content-services p {
   width: 50%;
   font-size: 20px;
 }
+
 .content-services h2 {
   font-size: 40px;
 }
+
 .botones-services {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
+/* ===== FADE ===== */
 .fade-in-section-scroll {
   display: flex;
   opacity: 0;
@@ -340,25 +377,8 @@ th {
   opacity: 1;
   transform: translateY(0);
 }
-.dicen {
-  width: 40%;
-  height: 80%;
-  z-index: 11;
-  padding: 0 50px;
-}
-.opinion {
-  width: 60%;
-  height: 50%;
-  z-index: 11;
-}
-.opinion h5 {
-  padding: 15px 5px 35px;
-  color: blue;
-}
-.opinion p {
-  font-size: 20px;
-  font-weight: 500;
-}
+
+/* ===== FOOTER ===== */
 .container-footer {
   padding: 20px 50px;
   background-color: white;
@@ -366,100 +386,25 @@ th {
   display: flex;
   justify-content: space-between;
 }
-.container-contacto {
-  width: 100vw;
-  height: 100vh;
-  padding: 0 50px;
-  display: flex;
-  flex-direction: column;
-}
-.content-form {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-}
-.formulario {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-}
-.formulario form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-form input {
-  border: 0.5px solid rgb(151, 151, 151);
-  padding: 20px;
-}
-form textarea {
-  height: 100%;
-  border: 0.5px solid rgb(151, 151, 151);
-  padding: 20px;
-}
-.info-form {
-  display: flex;
-  margin-top: 30px;
-}
-.box-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 50%;
-}
-.checkbox {
-  padding-left: 15px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
-}
-.checkbox input {
-  margin-bottom: 1rem;
-}
-.enviar {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.enviar .btn-nav {
-  margin-left: auto;
-}
-.disabled {
-  background-color: grey;
-  width: 225px;
-  padding: 15px;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  font-weight: bold;
-  cursor: none;
-}
-.container-contacto h1 {
-  margin: 20px 0;
-}
-.star-contacto {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .footer-contacto {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 8px;
 }
+
 .socialmedia {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   gap: 5px;
 }
+
 .footer-contacto h5 {
   margin-bottom: 0;
 }
+
 .socialmedia a img {
   transition: transform 0.2s ease;
 }
@@ -472,22 +417,105 @@ form textarea {
   color: #fd9c9b !important;
   transition: color 0.2s ease;
 }
+
+/* ===== CONTACTO ===== */
+.container-contacto {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.formulario form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  border: 0.5px solid rgb(151, 151, 151);
+  padding: 20px;
+}
+
+form textarea {
+  height: 100%;
+  border: 0.5px solid rgb(151, 151, 151);
+  padding: 20px;
+}
+
+.info-form {
+  display: flex;
+  margin-top: 30px;
+}
+
+.box-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.checkbox {
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.checkbox input {
+  margin-bottom: 1rem;
+}
+
+.enviar {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .enviar .btn-nav,
 .enviar .disabled {
   margin-left: 0;
   width: 225px;
 }
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+
+.disabled {
+  background-color: grey;
+  width: 225px;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: none;
 }
+
+.container-contacto h1 {
+  margin: 20px 0;
+}
+
+.star-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== PRECIOS ===== */
 .precio-box {
   border: 2px solid #fd9c9b;
   background-color: #f9f9f9;
@@ -515,55 +543,94 @@ form textarea {
   font-size: 14px;
   white-space: pre-line;
 }
+
+/* ===== ACCESIBILIDAD ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== MEDIA QUERY MÓVIL ===== */
 @media screen and (max-width: 768px) {
-  /* General adjustments */
   body {
-    font-size: 90%; /* Ajustar el tamaño de fuente para móviles */
+    font-size: 90%;
   }
 
+  /* Hero móvil */
   .home {
-    padding: 20px;
+    padding: 0;
     height: auto;
+    min-height: 100vh;
     flex-direction: column;
   }
 
-  .home h1 {
-    font-size: 30px;
-    margin: 0 auto 20px;
-    font-weight: bolder;
-    color: black;
+  .content-home {
+    margin: 20px auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 20px;
+    max-width: calc(100% - 30px);
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+  }
+
+  .content-home h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    line-height: 1.3;
   }
 
   .home p {
-    font-size: 19px;
-    margin: 0 auto;
-    font-weight: bolder;
-    color: black;
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
   }
 
+  /* Nav móvil */
   .nav {
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
   }
 
   .container-btn-nav {
     width: 100%;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
 
   .btn-nav {
-    width: 100%;
-    font-size: 16px;
-  }
-  .container-leng {
-    height: auto;
-    gap: 5px;
+    width: auto;
+    min-width: 120px;
+    padding: 10px 15px;
+    font-size: 14px;
   }
 
+  .container-leng {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    gap: 10px;
+  }
+
+  /* About móvil */
   .about {
     flex-direction: column;
     padding: 20px;
+    align-items: center;
   }
 
   .about img {
@@ -574,15 +641,27 @@ form textarea {
   .content-about {
     width: 100%;
     text-align: center;
+    align-self: auto;
+    margin-top: 0;
   }
 
+  /* Estudios móvil */
   .estudios {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
     flex-direction: column;
-    padding: 0px;
     gap: 20px;
   }
+
   .estudios h2 {
+    position: relative;
+    z-index: 12;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    width: 100%;
     text-align: center;
+    margin-top: 0;
   }
 
   .container-card {
@@ -593,125 +672,31 @@ form textarea {
   .cards {
     flex-direction: column;
     gap: 15px;
+    padding: 0 15px;
+    width: 100%;
   }
+
+  /* Pink section móvil */
   .image-pink {
     flex-direction: column;
     gap: 10px;
   }
+
   .pink-section {
     margin-top: 10px;
-    height: 50%;
+    height: auto;
     width: 100%;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
+    padding: 20px;
   }
 
   .image-pink img {
     width: 100%;
-    height: 50%;
-  }
-
-  .services-container {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .image-services {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .image-services img {
-    width: 100%;
     height: auto;
   }
 
-  .botones-services {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .container-contacto {
-    padding: 20px;
-  }
-
-  .content-form {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .formulario {
-    width: 100%;
-  }
-
-  .info-form {
-    flex-direction: column;
-  }
-
-  .enviar .btn-nav {
-    width: 100%;
-  }
-
-  .container-footer {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-contacto {
-    text-align: center;
-  }
-  .estudios {
-    height: auto;
-    min-height: 100vh;
-    padding: 20px 0;
-  }
-
-  .estudios h2 {
-    position: relative;
-    z-index: 12;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .cards {
-    padding: 0 15px;
-    width: 100%;
-  }
-  .content-form div:first-child {
-    width: 100% !important;
-  }
-
-  .content-form div:first-child img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .info-form {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .box-contacto {
-    width: 100%;
-  }
-
-  .enviar {
-    width: 100%;
-  }
-
-  .enviar > div {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 10px !important;
-  }
-
-  .enviar > div > div:first-child {
-    width: 100%;
-  }
+  /* Modal servicios móvil */
   .services-container {
     height: auto;
     min-height: 100vh;
@@ -750,5 +735,68 @@ form textarea {
 
   .botones-services button:last-child {
     align-self: flex-start;
+  }
+
+  /* Contacto móvil */
+  .container-contacto {
+    padding: 20px;
+    height: auto;
+  }
+
+  .content-form {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-form div:first-child {
+    width: 100% !important;
+  }
+
+  .content-form div:first-child img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+  .info-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .box-contacto {
+    width: 100%;
+  }
+
+  .enviar {
+    width: 100%;
+  }
+
+  .enviar > div {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .enviar > div > div:first-child {
+    width: 100%;
+  }
+
+  .enviar .btn-nav {
+    width: 100%;
+  }
+
+  /* Footer móvil */
+  .container-footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-contacto {
+    text-align: center;
   }
 }
