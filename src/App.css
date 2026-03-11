@@ -177,24 +177,34 @@ th {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 200px;
-  gap: 30px;
+  padding: 40px 100px;
+  gap: 60px;
 }
-.about img {
-  border: 5px solid black;
-  height: 70%;
-}
+
 .content-about {
   display: flex;
   flex-direction: column;
-  height: 80%;
-  width: 60%;
+  gap: 20px;
+  width: 50%;
+  align-self: flex-start;
+  margin-top: 50px;
 }
+
+.about img {
+  border: 5px solid black;
+  width: 50%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+}
+
 .content-about h2 {
-  font-size: 50px;
+  font-size: clamp(30px, 3vw, 50px);
 }
+
 .content-about p {
-  font-size: 25px;
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.6;
 }
 .estudios {
   height: 100vh;
