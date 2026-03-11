@@ -9,7 +9,7 @@ export default defineConfig({
       hostname: 'https://tu-proyecto.vercel.app',
       routes: ['/', '/contacto'],
       outDir: 'dist',
-      generateRobotsTxt: false, // 👈 añade esto
+      generateRobotsTxt: false,
     }),
   ],
 })
