@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import './App.css'
-import Home from './paginas/Home'
-import Contacto from './paginas/Contacto'
 import CookieConsent from 'react-cookie-consent'
 import { useState } from 'react'
 import ModalLegal from './componentes/ModalLegal'
 import legal from './data/dataLegal'
 import { useTranslation } from 'react-i18next'
+
+const Home = lazy(() => import('./paginas/Home'))
+const Contacto = lazy(() => import('./paginas/Contacto'))
 
 function App() {
   const { t } = useTranslation()
@@ -15,10 +17,12 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
+      <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </Suspense>
 
       <ModalLegal info={legalData[1]} lgShow={lgShow} setLgShow={setLgShow} />
 
