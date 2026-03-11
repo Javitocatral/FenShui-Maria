@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal'
-import volver from '../assets/volver.png'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ChevronLeft } from 'lucide-react'
 
 function ModalHogar({ setShow, show, popup, tipo }) {
   const { t } = useTranslation()
@@ -59,11 +59,7 @@ function ModalHogar({ setShow, show, popup, tipo }) {
               </button>
             </Link>
             <button onClick={() => setShow(false)}>
-              <img
-                style={{ width: '25px' }}
-                src={volver}
-                alt="Cerrar y volver"
-              />
+              <ChevronLeft size={40} color="#999999" />
             </button>
           </div>
         </div>

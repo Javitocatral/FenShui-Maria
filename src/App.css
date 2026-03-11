@@ -804,4 +804,7 @@ form textarea {
   .footer-contacto {
     text-align: center;
   }
+  .footer-contacto h5 {
+    display: none;
+  }
 }
