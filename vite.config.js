@@ -6,8 +6,10 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: 'https://tudominio.com',
+      hostname: 'https://tu-proyecto.vercel.app',
       routes: ['/', '/contacto'],
+      outDir: 'dist',
+      generateRobotsTxt: false, // 👈 añade esto
     }),
   ],
 })
