@@ -15,7 +15,7 @@ function Home() {
   const servicios = dataServicios(t)
 
   return (
-    <div>
+    <main>
       <section className="home">
         <Navbar />
         <h1 className="sr-only">
@@ -83,7 +83,7 @@ function Home() {
         </div>
       </Fadesection>
       <Footer />
-    </div>
+    </main>
   )
 }
 
