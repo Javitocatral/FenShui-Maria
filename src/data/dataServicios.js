@@ -15,6 +15,7 @@ const dataServicios = (t) => [
     titulo: t('servicios.hogar_titulo'),
     descripcion: t('servicios.hogar_desc'),
     img: salon,
+    tipo: 'hogar',
     popUp: {
       titulo: t('servicios.hogar_popup_titulo'),
       descripcion: t('servicios.hogar_popup_desc'),
@@ -27,6 +28,7 @@ const dataServicios = (t) => [
     titulo: t('servicios.empresa_titulo'),
     descripcion: t('servicios.empresa_desc'),
     img: tienda,
+    tipo: 'hogar',
     popUp: {
       titulo: t('servicios.empresa_popup_titulo'),
       descripcion: t('servicios.empresa_popup_desc'),
@@ -39,6 +41,7 @@ const dataServicios = (t) => [
     titulo: t('servicios.shopper_titulo'),
     descripcion: t('servicios.shopper_desc'),
     img: comedor,
+    tipo: 'shopper',
     popUp: {
       titulo: t('servicios.shopper_popup_titulo'),
       descripcion: t('servicios.shopper_popup_desc'),

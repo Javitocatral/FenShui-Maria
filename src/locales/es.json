@@ -46,7 +46,12 @@
     "shopper_titulo": "Personal Shopper de Hogar",
     "shopper_desc": "Tras el análisis del espacio yo me puedo encargar de buscar todos los elementos que sean necesarios para armonizarlo.",
     "shopper_popup_titulo": "Personal Shopper de hogar",
-    "shopper_popup_desc": "Una vez terminado el estudio a veces es complicado, o no tienes tiempo para localizar esas piezas que hemos detectado que armonizarían o ayudarían a distribuir mejor ese espacio. Quizá prefieres dejarlo en mis manos para ir a lo seguro y conjugar estilo y practicidad sin más preocupaciones."
+    "shopper_popup_desc": "Una vez terminado el estudio a veces es complicado, o no tienes tiempo para localizar esas piezas que hemos detectado que armonizarían o ayudarían a distribuir mejor ese espacio. Quizá prefieres dejarlo en mis manos para ir a lo seguro y conjugar estilo y practicidad sin más preocupaciones.",
+    "precios_titulo": "¿Cómo se realiza y qué incluye?",
+    "precios_hogar_titulo": "Tarifas",
+    "precios_shopper": "Acompañamiento y asesoría en la compra: 80€/h",
+    "precios_proceso": "Una vez concertada la cita, hacemos la primera videollamada de 60 minutos. El estudio se puede realizar 100% online, aportando toda la información que te pediré por email tras nuestra primera videollamada.\nVisito el espacio si así lo requieres y si el proyecto lo precisa (siempre que esté en la provincia de Alicante o Murcia) con un coste de 30€ adicionales. Para otros desplazamientos consultar.\nTras la realización del estudio recibirás un documento con el resultado del proyecto, que igualmente compartiré contigo en otra videollamada de 60 minutos.\nLa forma de pago es 50% al contratar la consultoría y 50% restante a la entrega del estudio.",
+    "precios_hogar": "Armonización de una sola estancia (menos de 20m²): 85€ (IVA incluido)\nArmonización sin cálculo de estrellas hasta 80m²: 380€ (IVA incluido)\nEstudio con cálculo de estrellas y armonización hasta 80m²: 600€ (IVA incluido)\nEspacios mayores y exteriores según caso. Contacta conmigo."
   },
   "footer": {
     "whatsapp_mensaje": "¡Hola! Quiero más información."

@@ -16,16 +16,23 @@ function Home() {
 
   return (
     <div>
-      <div className="home">
+      <section className="home">
         <Navbar />
+        <h1 className="sr-only">
+          Consultoría Feng Shui en Alicante - María Latorre - Hogar y Negocio
+        </h1>
         <div className="content-home">
-          <h1>{t('home.hero_titulo')}</h1>
+          <h2>{t('home.hero_titulo')}</h2>
           <p>{t('home.hero_texto')}</p>
         </div>
-      </div>
+      </section>
       <Fadesection>
-        <div id="soy" className="about">
-          <img src={Maria} alt="" loading="lazy" />
+        <section id="soy" className="about">
+          <img
+            src={Maria}
+            alt="María Latorre consultora de Feng Shui en Alicante"
+            loading="lazy"
+          />
           <div className="content-about">
             <h2>{t('home.about_titulo')}</h2>
             <p>{t('home.about_p1')}</p>
@@ -34,10 +41,10 @@ function Home() {
               <button className="btn-nav">{t('home.hablamos')}</button>
             </Link>
           </div>
-        </div>
+        </section>
       </Fadesection>
       <Fadesection>
-        <div id="servicios" className="estudios">
+        <section id="servicios" className="estudios">
           <h2>{t('home.servicios_titulo')}</h2>
           <div className="cards">
             {servicios.map((cadaServicio, index) => (
@@ -47,10 +54,11 @@ function Home() {
                 text={cadaServicio.descripcion}
                 img={cadaServicio.img}
                 popup={cadaServicio.popUp}
+                tipo={cadaServicio.tipo} // 👈
               />
             ))}
           </div>
-        </div>
+        </section>
       </Fadesection>
       <Fadesection>
         <div className="about" style={{ backgroundColor: '#FD9C9B' }}>
@@ -62,13 +70,13 @@ function Home() {
             <img
               className="small-image"
               src={casa1}
-              alt="casa1"
+              alt="Salón armonizado con Feng Shui"
               loading="lazy"
             />
             <img
               className="normal-image"
               src={casa2}
-              alt="casa2"
+              alt="Hogar con equilibrio energético Feng Shui"
               loading="lazy"
             />
           </div>

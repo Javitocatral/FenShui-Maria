@@ -46,7 +46,12 @@
     "shopper_titulo": "Home Personal Shopper",
     "shopper_desc": "After the space analysis, I can take care of finding all the elements needed to harmonise it.",
     "shopper_popup_titulo": "Home Personal Shopper",
-    "shopper_popup_desc": "Once the study is done, it can sometimes be complicated — or you simply don't have time — to find the pieces we've identified. Maybe you'd rather leave it in my hands to make sure style and practicality come together without any more hassle."
+    "shopper_popup_desc": "Once the study is done, it can sometimes be complicated — or you simply don't have time — to find the pieces we've identified. Maybe you'd rather leave it in my hands to make sure style and practicality come together without any more hassle.",
+    "precios_titulo": "How it works and what's included",
+    "precios_proceso": "Una vez concertada la cita, hacemos la primera videollamada de 60 minutos. El estudio se puede realizar 100% online, aportando toda la información que te pediré por email tras nuestra primera videollamada.\nVisito el espacio si así lo requieres y si el proyecto lo precisa (siempre que esté en la provincia de Alicante o Murcia) con un coste de 30€ adicionales. Para otros desplazamientos consultar.\nTras la realización del estudio recibirás un documento con el resultado del proyecto, que igualmente compartiré contigo en otra videollamada de 60 minutos.\nLa forma de pago es 50% al contratar la consultoría y 50% restante a la entrega del estudio.",
+    "precios_hogar_titulo": "Pricing",
+    "precios_hogar": "Single room harmonisation (under 20m²): €85 (VAT included)\n\nHarmonisation without flying stars calculation up to 80m²: €380 (VAT included)\n\nFull study with flying stars and harmonisation up to 80m²: €600 (VAT included)\n\nLarger spaces and exteriors on request. Get in touch.",
+    "precios_shopper": "Personal shopping accompaniment and advice: €80/h"
   },
   "footer": {
     "whatsapp_mensaje": "Hello! I would like more information."

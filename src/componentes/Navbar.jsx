@@ -6,8 +6,12 @@ function Navbar() {
   const { t, i18n } = useTranslation()
 
   return (
-    <div className="nav">
-      <img style={{ width: '300px' }} src={logo2} alt="" />
+    <nav className="nav">
+      <img
+        style={{ width: '300px' }}
+        src={logo2}
+        alt="Logo María Latorre Feng Shui"
+      />
 
       <div className="container-btn-nav">
         <a href="#soy">
@@ -22,10 +26,26 @@ function Navbar() {
       </div>
 
       <div className="container-leng">
-        <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-        <button onClick={() => i18n.changeLanguage('es')}>ES</button>
+        <button
+          onClick={() => {
+            i18n.changeLanguage('en')
+            localStorage.setItem('idioma', 'en')
+          }}
+          aria-label="Switch to English"
+        >
+          EN
+        </button>
+        <button
+          onClick={() => {
+            i18n.changeLanguage('es')
+            localStorage.setItem('idioma', 'es')
+          }}
+          aria-label="Cambiar a Español"
+        >
+          ES
+        </button>
       </div>
-    </div>
+    </nav>
   )
 }
 

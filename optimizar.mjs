@@ -8,7 +8,7 @@ readdirSync(carpeta)
   .filter((f) => f.match(/\.(jpg|jpeg|png)$/i))
   .forEach((file) => {
     sharp(join(carpeta, file))
-      .webp({ quality: 80 })
+      .webp({ quality: 70 })
       .toFile(join(carpeta, file.replace(/\.(jpg|jpeg|png)$/i, '.webp')))
       .then(() => console.log(`✅ ${file} → webp`))
   })

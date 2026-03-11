@@ -2,14 +2,57 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './paginas/Home'
 import Contacto from './paginas/Contacto'
+import CookieConsent from 'react-cookie-consent'
+import { useState } from 'react'
+import ModalLegal from './componentes/ModalLegal'
+import legal from './data/dataLegal'
+import { useTranslation } from 'react-i18next'
 
 function App() {
+  const { t } = useTranslation()
+  const [lgShow, setLgShow] = useState(false)
+  const legalData = legal(t)
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+
+      <ModalLegal info={legalData[1]} lgShow={lgShow} setLgShow={setLgShow} />
+
+      <CookieConsent
+        location="bottom"
+        buttonText="Aceptar"
+        declineButtonText="Rechazar"
+        enableDeclineButton
+        style={{ background: '#2B373B', fontSize: '14px' }}
+        buttonStyle={{
+          background: '#fd9c9b',
+          color: 'white',
+          fontWeight: 'bold',
+          borderRadius: '4px',
+        }}
+        declineButtonStyle={{
+          background: 'transparent',
+          border: '1px solid white',
+          color: 'white',
+          borderRadius: '4px',
+        }}
+      >
+        Usamos cookies para mejorar tu experiencia.{' '}
+        <button
+          onClick={() => setLgShow(true)}
+          style={{
+            color: '#fd9c9b',
+            textDecoration: 'underline',
+            background: 'transparent',
+          }}
+        >
+          Más información
+        </button>
+      </CookieConsent>
     </>
   )
 }

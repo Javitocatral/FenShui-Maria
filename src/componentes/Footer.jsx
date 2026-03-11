@@ -18,11 +18,11 @@ function Footer() {
   const legalData = legal(t)
 
   return (
-    <div className="container-footer">
+    <footer className="container-footer">
       <img
         style={{ width: '158px' }}
         src={logofooter}
-        alt="logotipo que pone maria latorre"
+        alt="Logo María Latorre Feng Shui"
       />
       <div className="footer-contacto">
         <h5>Maria Latorre</h5>
@@ -37,7 +37,7 @@ function Footer() {
             <img
               style={{ width: '30px' }}
               src={whatsap}
-              alt="logotipo de la red social Whatsapp"
+              alt="Contactar por WhatsApp"
               loading="lazy"
             />
           </a>
@@ -45,7 +45,7 @@ function Footer() {
             <img
               style={{ width: '30px' }}
               src={ig}
-              alt="logotipo de instagram"
+              alt="Síguenos en Instagram"
               loading="lazy"
             />
           </a>
@@ -53,7 +53,7 @@ function Footer() {
             <img
               style={{ width: '35px' }}
               src={youtube}
-              alt="logotipo de youtube"
+              alt="Canal de YouTube María Latorre Feng Shui"
               loading="lazy"
             />
           </a>
@@ -81,7 +81,7 @@ function Footer() {
           setLgShow={setLgShow}
         />
       )}
-    </div>
+    </footer>
   )
 }
 

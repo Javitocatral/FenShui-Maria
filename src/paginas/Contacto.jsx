@@ -59,15 +59,15 @@ function Contacto() {
 
     emailjs
       .send(
-        'service_9zkxffn',
-        'template_h7zvn1d',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           nombre: data.nombre,
           email: data.email,
           telefono: data.telefono,
           descripcion: data.descripcion,
         },
-        'IwPsel-v-iQPV5RkM'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -87,18 +87,22 @@ function Contacto() {
 
   return (
     <>
-      <div className="container-contacto">
+      <main className="container-contacto">
         <div className="star-contacto">
           <h1>{t('contacto.titulo')}</h1>
           <Link to={'/'}>
-            <img style={{ width: '25px' }} src={volver} alt="Volver" />
+            <img
+              style={{ width: '25px' }}
+              src={volver}
+              alt="Volver a la página principal"
+            />
           </Link>
         </div>
         <div className="content-form">
           <div style={{ width: '50%' }}>
             <img
               src={salon}
-              alt="Imagen de un salón moderno y bonito"
+              alt="Consultoría Feng Shui para hogar en Alicante"
               loading="lazy"
             />
           </div>
@@ -147,7 +151,7 @@ function Contacto() {
               <img
                 style={{ width: '25px' }}
                 src={mensaje}
-                alt="Icono de la red social Whatsapp"
+                alt="Contactar por WhatsApp con María Latorre"
               />
             </a>
           </div>
@@ -220,7 +224,7 @@ function Contacto() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   )
 }

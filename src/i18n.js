@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
     es: { translation: es },
     en: { translation: en },
   },
-  lng: 'es',
+  lng: localStorage.getItem('idioma') || 'es',
   fallbackLng: 'es',
   interpolation: { escapeValue: false },
 })
