@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: 'https://marialatorrefengshui.com/',
+      hostname: 'https://tu-proyecto.vercel.app',
       routes: ['/', '/contacto'],
       outDir: 'dist',
       generateRobotsTxt: false,

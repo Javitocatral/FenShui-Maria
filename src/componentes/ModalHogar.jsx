@@ -36,6 +36,7 @@ function ModalHogar({ setShow, show, popup, tipo }) {
             <h2>{popup.titulo}</h2>
             <p>{popup.descripcion}</p>
           </div>
+          {/* Cuadro de precios */}
           <div className="precio-box">
             <h3
               style={{

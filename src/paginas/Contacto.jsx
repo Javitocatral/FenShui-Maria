@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 import ModalLegal from '../componentes/ModalLegal'
 import legal from '../data/dataLegal'
 import { useTranslation } from 'react-i18next'
-import { ChevronLeft } from 'lucide-react'
 
 function Contacto() {
   const { t } = useTranslation()
@@ -92,7 +91,11 @@ function Contacto() {
         <div className="star-contacto">
           <h1>{t('contacto.titulo')}</h1>
           <Link to={'/'}>
-            <ChevronLeft size={40} color="#999999" />
+            <img
+              style={{ width: '25px' }}
+              src={volver}
+              alt="Volver a la página principal"
+            />
           </Link>
         </div>
         <div className="content-form">
