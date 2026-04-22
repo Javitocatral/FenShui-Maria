@@ -59,7 +59,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="footer-contacto">
+      <div className="footer-legal">
         {legalData.map((cadalegal, index) => (
           <div key={index}>
             <button

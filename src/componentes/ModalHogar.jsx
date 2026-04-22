@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal'
-import volver from '../assets/volver.png'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { ChevronLeft } from 'lucide-react'
 
 function ModalHogar({ setShow, show, popup, tipo }) {
   const { t } = useTranslation()
@@ -36,7 +36,6 @@ function ModalHogar({ setShow, show, popup, tipo }) {
             <h2>{popup.titulo}</h2>
             <p>{popup.descripcion}</p>
           </div>
-          {/* Cuadro de precios */}
           <div className="precio-box">
             <h3
               style={{
@@ -51,7 +50,6 @@ function ModalHogar({ setShow, show, popup, tipo }) {
             <p className="precio-proceso">{t('servicios.precios_proceso')}</p>
             <p className="precio-proceso">{precioTexto}</p>
           </div>
-
           <div className="botones-services">
             <Link to={'/contacto'}>
               <button className="btn-nav" style={{ width: '100%' }}>
@@ -59,11 +57,7 @@ function ModalHogar({ setShow, show, popup, tipo }) {
               </button>
             </Link>
             <button onClick={() => setShow(false)}>
-              <img
-                style={{ width: '25px' }}
-                src={volver}
-                alt="Cerrar y volver"
-              />
+              <ChevronLeft size={40} color="#999999" />
             </button>
           </div>
         </div>
