@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import salon from '../assets/salon.webp'
 import mensaje from '../assets/whatsapp.webp'
-import volver from '../assets/volver.webp'
+import { ChevronLeft } from 'lucide-react'
 import emailjs from 'emailjs-com'
 import { Link } from 'react-router-dom'
 import ModalLegal from '../componentes/ModalLegal'
@@ -91,11 +91,7 @@ function Contacto() {
         <div className="star-contacto">
           <h1>{t('contacto.titulo')}</h1>
           <Link to={'/'}>
-            <img
-              style={{ width: '25px' }}
-              src={volver}
-              alt="Volver a la página principal"
-            />
+            <ChevronLeft size={40} color="#999999" />
           </Link>
         </div>
         <div className="content-form">
