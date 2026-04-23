@@ -13,7 +13,7 @@ function ModalHogar({ setShow, show, popup, tipo }) {
 
   return (
     <Modal show={show} fullscreen={true}>
-      <Modal.Body>
+      <Modal.Body style={{ marginBottom: '24px' }}>
         <div className="services-container" style={{ height: '100vh' }}>
           <div className="image-services">
             <img
