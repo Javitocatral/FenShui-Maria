@@ -205,7 +205,6 @@ th {
   max-width: 700px;
   height: auto;
   object-fit: cover;
-  border: 5px solid black;
 }
 
 .content-about {
