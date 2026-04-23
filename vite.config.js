@@ -4,9 +4,11 @@ import sitemap from 'vite-plugin-sitemap'
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'automatic',
+    }),
     sitemap({
-      hostname: 'https://tu-proyecto.vercel.app',
+      hostname: 'https://marialatorrefengshui.com',
       routes: ['/', '/contacto'],
       outDir: 'dist',
       generateRobotsTxt: false,
