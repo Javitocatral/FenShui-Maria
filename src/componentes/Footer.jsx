@@ -4,7 +4,6 @@ import whatsap from '../assets/whatsapp-footer.webp'
 import ModalLegal from './ModalLegal'
 import legal from '../data/dataLegal'
 import ig from '../assets/ig.webp'
-import youtube from '../assets/youtube.webp'
 import { useTranslation } from 'react-i18next'
 
 function Footer() {
@@ -41,19 +40,15 @@ function Footer() {
               loading="lazy"
             />
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com/marialatorrefengshui?igsh=MTJ6YmQ3anl3dmt3ZQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               style={{ width: '30px' }}
               src={ig}
               alt="Síguenos en Instagram"
-              loading="lazy"
-            />
-          </a>
-          <a href="#">
-            <img
-              style={{ width: '35px' }}
-              src={youtube}
-              alt="Canal de YouTube María Latorre Feng Shui"
               loading="lazy"
             />
           </a>
