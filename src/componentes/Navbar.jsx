@@ -27,7 +27,6 @@ function Navbar() {
 
       <div className="container-leng">
         <button
-          className="btn-nav"
           style={{ color: 'black' }}
           onClick={() => {
             i18n.changeLanguage('en')
@@ -38,7 +37,6 @@ function Navbar() {
           EN
         </button>
         <button
-          className="btn-nav"
           style={{ color: 'black' }}
           onClick={() => {
             i18n.changeLanguage('es')
