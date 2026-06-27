@@ -175,6 +175,7 @@ th {
 .container-leng button {
   position: relative;
   font-size: 25px;
+  color: black;
   padding: 10px;
   border-radius: 50%;
   transition:

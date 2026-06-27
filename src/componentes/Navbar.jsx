@@ -27,7 +27,6 @@ function Navbar() {
 
       <div className="container-leng">
         <button
-          style={{ color: 'black' }}
           onClick={() => {
             i18n.changeLanguage('en')
             localStorage.setItem('idioma', 'en')
@@ -37,7 +36,6 @@ function Navbar() {
           EN
         </button>
         <button
-          style={{ color: 'black' }}
           onClick={() => {
             i18n.changeLanguage('es')
             localStorage.setItem('idioma', 'es')
